@@ -15,8 +15,11 @@ def char_count(book):
         contents = f.read().lower()
         chars = {}
         for char in contents:
-            if char not in chars:
-                chars[char] = char + 1
+            if char.isalpha():
+                if char not in chars:
+                    chars[char] = 1
+                else:
+                    chars[char] += 1
         return chars
 
 result = char_count("books/frankenstein.txt")
