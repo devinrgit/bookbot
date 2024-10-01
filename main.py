@@ -21,11 +21,10 @@ def char_count(book):
                 else:
                     chars[char] += 1
         return chars
-
+        
 def report(book):
     print(f"---Begin report of", book, "---")
     print(word_count(book), "words found in the document")
-    
-result = char_count("books/frankenstein.txt")
-print(result)
+
+
 
