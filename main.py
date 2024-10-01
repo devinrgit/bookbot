@@ -3,12 +3,12 @@ def main():
     text = get_book_text(book_path)
     num_words = word_count(text)
     char_dict = char_count(text)
-    print(f"---Begin report of", book_path, "---")
+    print(f"--- Begin report of", book_path, "---")
     print(num_words, "words found in the document")
     for c in char_dict:
-        print(f"The '", c , "' character was found ", char_dict[c], "times")
-    print("--End Report--")
-    
+        print(f"The '", c , "' character was found", char_dict[c], "times")
+    print("-- End Report --")
+
 def get_book_text(path):
     with open(path) as f:
         return f.read()
